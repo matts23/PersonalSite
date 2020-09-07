@@ -1,0 +1,39 @@
+.navContainer{
+    display: none;
+}
+
+.navContainer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navContainer li{
+    color: white;
+    font-size: .7rem;
+    padding: 1rem;
+}
+
+.linkWrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.icon{
+    justify-self: center;
+    margin: auto;
+}
+
+@media only screen and (max-width: 450px){
+    .navContainer{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        background-color: black;
+        width: 100%;
+    }
+}

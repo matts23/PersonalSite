@@ -1,0 +1,69 @@
+.mainContainer{
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainContainer p{
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    padding: 1rem;
+}
+
+.mainContainer h1{
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.mainContainer h2{
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.mainContainer h3{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.mainContainer h4{
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.mainContainer ul{
+    margin: 1rem;
+    padding: 1rem;
+    list-style: disc;
+}
+
+.mainContainer li{
+    padding: 1rem;
+    font-size: 1.4rem
+}
+
+@media only screen and (max-width: 800px){
+    .mainContainer p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 1rem;
+    }
+
+    .mainContainer li{
+        font-size: 1rem
+    }
+
+    .mainContainer h2{
+        font-size: 2.5rem;
+    }
+    
+    .mainContainer h3{
+        font-size: 1.5rem;
+    }
+    
+    .mainContainer h4{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}

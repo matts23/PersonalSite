@@ -1,57 +1,61 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import PostTile from "../components/post-tile"
+import Bio from "../components/bio"
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Gatsby Blog Template</h1>
-    <div>
-        <Link to="/">Home</Link>
-        <h1>Latest Post</h1>
+    <div style={{
+      width: `100%`,
+    }}>
+      <Bio />
+      <section style={{
+        fontSize: `1.5rem`,
+      }}>
+        <h2 style={{
+          margin: `2rem`,
+          textAlign:`center`
+        }}>Latest Article</h2>
+        <div style={{margin:`auto`}}>
         {data.allMarkdownRemark.edges.map(post =>(
-            <div key={post.node.id}>
-                <h3>{post.node.frontmatter.title}</h3>
-                <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
-                <br />
-                <br />
-                <Link to={post.node.frontmatter.path}>Read More</Link>
-                <br />
-                <br />
-                <hr />
-            </div>
-        ))}
+                    <PostTile
+                      title={post.node.frontmatter.title}
+                      author={post.node.frontmatter.author}
+                      path={post.node.frontmatter.path}
+                      date={post.node.frontmatter.date}
+                      id={post.node.frontmatter.id} />
+                ))}
+        </div>
+      </section>
     </div>
-    
-    <Link to="/page-2/">Go to page 2</Link> <br />
   </Layout>
 )
 
-export const pageQuery = graphql`
-    query BlogIndexQuery{
-      allMarkdownRemark(
-        sort: {
-          fields: [frontmatter___date]
-          order: ASC
-        }
-      ) {
-        totalCount
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-              author
-              path
+export const featuredPostQuery = graphql`
+    query FeaturedPostQuery{
+        allMarkdownRemark(
+            limit: 1
+            sort: {
+                  fields: [frontmatter___date]
+                  order: DESC
+                }
+              ) {
+            totalCount
+            edges {
+              node {
+                frontmatter {
+                  title
+                  author
+                  date
+                  path
+                }
+              }
             }
-          }
         }
-      }
     }
 `
-
 export default IndexPage

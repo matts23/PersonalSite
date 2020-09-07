@@ -1,0 +1,72 @@
+.mainSection{
+    max-width: 700px;
+    margin: 5rem auto 5rem auto;
+}
+
+.bioTitle{
+    font-size: 4rem;
+}
+
+.paraBlock{
+    font-family: 'Roboto', sans-serif;
+    margin: 3rem 2rem 3rem 2rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.listContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5rem 1rem 5rem 1rem;
+}
+
+.iconContainer{
+    padding: 1rem;
+    border-radius: 10px;
+    justify-self: center;
+    text-align: center;
+}
+
+.iconContainer a{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.iconContainer h3{
+    color: black;
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+
+.iconContainer h3:hover{
+    cursor: pointer;
+}
+
+.icon{
+    width: 5rem;
+    height: 5rem;
+    stroke-width: .6px;
+}
+
+@media only screen and (max-width: 450px){
+    .mainSection{
+        margin: 3rem 1rem 3rem 1rem;
+    }
+    .paraBlock{
+        margin: 0 .5rem 4rem .5rem;
+        font-size: 1rem;
+    }
+    .listContainer{
+        margin: auto;
+        justify-content: space-around;
+        width: 80%;
+    }
+    .iconContainer{
+        margin: 1rem;
+    }
+}
