@@ -8,7 +8,8 @@
 }
 
 .paraBlock{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    
     margin: 3rem 2rem 3rem 2rem;
     font-size: 1.5rem;
     line-height: 2.5rem;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby';
+import BlogPostStyles from "./styles/blog-post.module.css"
 
 import Layout from "../components/layout"
 
@@ -9,28 +10,14 @@ export default function Template({data}){
 
     return(
         <Layout>
-            <Link to="/blog">Back to Archive</Link>
-            <article style={{
-                minHeight: `100vh`,
-                maxWidth:`700px`,
-                margin: `auto`,
-                textAlign: `center`
-            }}>
+            <Link to="/blog" style={{marginLeft:`2rem`}}>Back to Archive</Link>
+            <article className={BlogPostStyles.articleBody}>
                 <h1 style={{
                     fontSize:`3rem`,
                     padding:`1rem`
                 }}>{post.frontmatter.title}</h1>
-                <h4 style={{
-                    fontSize:`1.5rem`,
-                    padding:`1rem`,
-                    marginBottom:`3rem`
-                }}>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
-                <div style={{
-                    lineHeight:`2rem`,
-                    fontSize:`1.2rem`,
-                    textAlign:`left`,
-                    padding:`1rem`
-                }} dangerouslySetInnerHTML={{__html: post.html}}/>
+                <h4>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
+                <div className={BlogPostStyles.content} dangerouslySetInnerHTML={{ __html: post.html }}/>
             </article>
         </Layout>
     )
