@@ -2,14 +2,15 @@ import React from "react"
 import bioStyles from "./styles/bio.module.css"
 import { Link } from "gatsby"
 import { User,BookOpen,Code } from 'react-feather'
-import AnimatedTitle from "./animated-title"
+
 
 const Bio = () => (
   <section className={bioStyles.mainSection}>
-    
-      <AnimatedTitle firstLine="Hello,"
-      secondLine="my name is matt." />
-      <p className={bioStyles.paraBlock}>I strive to implement the best solution for every situation. If I don't know it, I'll learn it.
+    <div className={bioStyles.titleWrapper}>
+      <h2>Hello,</h2>
+      <h2>my name is matt</h2>  
+    </div>
+      <p className={bioStyles.paraBlock}>I strive to implement the best solution for every situation. My focus is in serverless technology that allows businesses and individuals to create world class applications with a fraction of the overhead cost. If I don't know the best solution for you, I'll learn it.
       </p>
       <ul className={bioStyles.listContainer} name="contact-info">
           <li>

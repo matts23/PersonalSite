@@ -3,15 +3,18 @@
     margin: 5rem auto 5rem auto;
 }
 
+.titleWrapper{
+    margin-left: 2rem;
+    font-size: 4rem;
+}
+
 .bioTitle{
     font-size: 4rem;
 }
 
 .paraBlock{
-    /*font-family: 'Roboto', sans-serif;*/
-    
     margin: 3rem 2rem 3rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2.5rem;
 }
 
@@ -40,7 +43,6 @@
     color: black;
     border: 1px solid black;
     padding: .5rem;
-    border-radius: 10px;
 }
 
 
@@ -57,6 +59,11 @@
 @media only screen and (max-width: 450px){
     .mainSection{
         margin: 3rem 1rem 3rem 1rem;
+    }
+    .titleWrapper{
+        margin-left: .5rem;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
     }
     .paraBlock{
         margin: 0 .5rem 4rem .5rem;

@@ -2,7 +2,7 @@
     min-height: 100vh;
     max-width: 700px;
     margin: auto;
-    text-align: center;
+    text-align: left;
 }
 
 .articleBody h1{
@@ -14,14 +14,17 @@
 }
 
 .articleBody h4{
-    font-size: 1.5rem;
-    padding: 1rem;
+    text-align: left;
+    max-width: 30%;
+    font-size: 1rem;
+    margin-left: 1rem;
     margin-bottom: 3rem;
+    font-weight: lighter;
+    background-color: rgb(250, 237, 39);
 }
 
 .content{
     line-height: 2rem;
     font-size: 1.2rem;
-    text-align: left;
     padding: 1rem;
 }

@@ -11,9 +11,18 @@ const Header = ({ siteTitle }) => (
           to="/"
           className={HeaderStyles.titleLink}
         >
-          {siteTitle}
+          {`{ ${siteTitle} }`}
         </Link>
       </h1>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/blog">Articles</Link></li>
+          <li><Link to="/">Contact</Link></li>
+        </ul>
+      </nav>
   </header>
 )
 
