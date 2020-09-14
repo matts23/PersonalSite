@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import NavStyles from "./styles/nav.module.css"
-import { Menu } from 'react-feather'
+import { Menu, X } from 'react-feather'
 
 class Nav extends React.Component{
 
@@ -15,10 +15,12 @@ class Nav extends React.Component{
         })
     }
 
+
     render(){
+        let icon = this.state.bottomDrawerOpen ? <X /> : <Menu />
         return (
             <div className={NavStyles.mainWrapper}>
-                <button onClick={this.buttonClickHandler}><Menu /></button>
+                <button onClick={this.buttonClickHandler}>{icon}</button>
                 <nav className={`${NavStyles.navContainer}
                 ${this.state.bottomDrawerOpen ? NavStyles.open : ''}`}>
                 <ul>
@@ -42,8 +44,15 @@ class Nav extends React.Component{
                             Articles
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/" className={NavStyles.linkWrapper}>
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
             </nav>
+            <div className={`${NavStyles.backDrop}
+                ${this.state.bottomDrawerOpen ? NavStyles.backDropOpen : ''}`}></div>
             </div>
         )
     }
