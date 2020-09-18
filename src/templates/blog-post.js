@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby';
+import SEO from "../components/seo"
 import BlogPostStyles from "./styles/blog-post.module.css"
 
 import Layout from "../components/layout"
@@ -10,7 +11,7 @@ export default function Template({data}){
 
     return(
         <Layout>
-            <Link to="/blog" style={{marginLeft:`2rem`}}>Back to Archive</Link>
+            <SEO title={post.frontmatter.title}/>
             <article className={BlogPostStyles.articleBody}>
                 <h1 style={{
                     fontSize:`3rem`,
@@ -19,6 +20,7 @@ export default function Template({data}){
                 <h4>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
                 <div className={BlogPostStyles.content} dangerouslySetInnerHTML={{ __html: post.html }}/>
             </article>
+            <Link to="/blog" style={{marginLeft:`2rem`}}>Back to Archive</Link>
         </Layout>
     )
 }

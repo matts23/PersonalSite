@@ -1,60 +1,52 @@
 .mainSection{
-    max-width: 700px;
+    max-width: 1000px;
+    height: 100vh;
     margin: 5rem auto 5rem auto;
+    text-align: center;
 }
 
 .titleWrapper{
     margin-left: 2rem;
-    font-size: 4rem;
-}
-
-.bioTitle{
-    font-size: 4rem;
+    font-size: 7rem;
+    text-align: left;
+    color:rgb(245,243,238);;
+    -webkit-text-stroke: 4px black;
+    text-shadow: 7px 0px 0px black;
 }
 
 .paraBlock{
+    max-width: 700px;
     margin: 3rem 2rem 3rem 2rem;
     font-size: 1.2rem;
     line-height: 2.5rem;
+    text-align: left;
 }
 
-.listContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5rem 1rem 5rem 1rem;
-}
-
-.iconContainer{
-    padding: 1rem;
-    border-radius: 10px;
-    justify-self: center;
-    text-align: center;
-}
-
-.iconContainer a{
-  text-align: center;
-  text-decoration: none;
-  color: black;
-}
-
-.iconContainer h3{
-    color: black;
-    border: 1px solid black;
-    padding: .5rem;
-}
-
-
-.iconContainer h3:hover{
-    cursor: pointer;
+.borderBottom{
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
 }
 
 .icon{
-    width: 5rem;
-    height: 5rem;
-    stroke-width: .6px;
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    animation: bounce 0.7s; 
+    animation-direction: alternate; 
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+    animation-iteration-count: 6; 
+    animation-delay: 2s;
 }
+
+@keyframes bounce { 
+    from { 
+        transform: translate3d(0, 0, 0); 
+    } 
+    to { 
+        transform: translate3d(0, 200px, 0); 
+    } 
+} 
+
 
 @media only screen and (max-width: 450px){
     .mainSection{
@@ -64,17 +56,11 @@
         margin-left: .5rem;
         margin-bottom: 3rem;
         font-size: 2.5rem;
+        -webkit-text-stroke: 2px black;
+        text-shadow: 3px 0px 0px black;
     }
     .paraBlock{
         margin: 0 .5rem 4rem .5rem;
         font-size: 1rem;
-    }
-    .listContainer{
-        margin: auto;
-        justify-content: space-around;
-        width: 80%;
-    }
-    .iconContainer{
-        margin: 1rem;
     }
 }

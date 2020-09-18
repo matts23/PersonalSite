@@ -45,7 +45,7 @@ class Nav extends React.Component{
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" className={NavStyles.linkWrapper}>
+                        <Link to="/contact" className={NavStyles.linkWrapper}>
                             Contact
                         </Link>
                     </li>

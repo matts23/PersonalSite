@@ -27,4 +27,9 @@
     line-height: 2rem;
     font-size: 1.2rem;
     padding: 1rem;
+    background-color: rgb(245,243,238);
+}
+
+.content p{
+    padding: .5rem;
 }

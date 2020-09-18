@@ -1,8 +1,8 @@
 .mainContainer{
     max-width: 800px;
     margin: 0 auto 0 auto;
-    font-family: 'Roboto', sans-serif;
 }
+
 
 .mainContainer p{
     font-size: 1.4rem;
@@ -11,23 +11,23 @@
 }
 
 .mainContainer h1{
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
 }
 
 .mainContainer h2{
-    font-size: 3rem;
-    padding: 1rem;
-}
-
-.mainContainer h3{
     font-size: 2rem;
     padding: 1rem;
 }
 
+.mainContainer h3{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
 .mainContainer h4{
-    padding: 1.5rem;
+    padding: 1.2rem;
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -42,6 +42,7 @@
     padding: 1rem;
     font-size: 1.4rem
 }
+
 
 @media only screen and (max-width: 800px){
     .mainContainer p{

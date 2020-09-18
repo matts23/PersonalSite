@@ -13,7 +13,7 @@ const BlogPage = ({data}) => (
                   author={post.node.frontmatter.author}
                   path={post.node.frontmatter.path}
                   date={post.node.frontmatter.date}
-                  id={post.node.frontmatter.id} />
+                  key={post.node.id} />
             ))}
         </div>
     </Layout>
@@ -30,6 +30,7 @@ export const pageQuery = graphql`
         totalCount
         edges {
           node {
+            id
             frontmatter {
               title
               date

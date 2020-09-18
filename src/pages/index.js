@@ -5,14 +5,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostTile from "../components/post-tile"
 import Bio from "../components/bio"
+import PageCard from "../components/page-cards"
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <div style={{
-      width: `100%`,
-    }}>
       <Bio />
+      <PageCard />
       <section style={{
         fontSize: `1.5rem`,
       }}>
@@ -20,18 +19,17 @@ const IndexPage = ({data}) => (
           margin: `2rem`,
           textAlign:`center`
         }}>Latest Article</h2>
-        <div style={{margin:`auto`}}>
+        <div style={{margin:`5rem auto 5rem auto`}}>
         {data.allMarkdownRemark.edges.map(post =>(
                     <PostTile
                       title={post.node.frontmatter.title}
                       author={post.node.frontmatter.author}
                       path={post.node.frontmatter.path}
                       date={post.node.frontmatter.date}
-                      id={post.node.frontmatter.id} />
+                      id={post.node.id} />
                 ))}
         </div>
       </section>
-    </div>
   </Layout>
 )
 
@@ -47,6 +45,7 @@ export const featuredPostQuery = graphql`
             totalCount
             edges {
               node {
+                id
                 frontmatter {
                   title
                   author

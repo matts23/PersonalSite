@@ -29,6 +29,7 @@
 
 .headContainer nav{
     margin-right: 2rem;
+    border-bottom: 3px solid rgb(255, 102, 102);
 }
 
 .titleLink{
