@@ -33,3 +33,7 @@
 .content p{
     padding: .5rem;
 }
+
+.content ol{
+    list-style-type: disc;
+}

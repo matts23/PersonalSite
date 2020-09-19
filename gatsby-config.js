@@ -49,6 +49,12 @@ module.exports = {
         plugins: [],
       }
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     `gatsby-plugin-mdx`,
     //`gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
