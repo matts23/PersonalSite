@@ -1,0 +1,44 @@
+.wrapper{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    background-color: rgba(214, 214, 214, .5);
+    padding: 4rem;
+}
+
+.card{
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 6rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+}
+
+.left{
+    transform: translateX(-25%);
+
+}
+
+.right{
+    transform: translateX(25%);
+}
+
+.cardSection h2{
+    font-size: 3rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.cardSection p{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 800px){
+    .left, .right{
+        transform: translateX(0);
+    }
+}

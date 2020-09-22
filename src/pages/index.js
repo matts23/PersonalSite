@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import PostTile from "../components/post-tile"
 import Bio from "../components/bio"
 import PageCard from "../components/page-cards"
+import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -29,6 +30,7 @@ const IndexPage = ({data}) => (
                       id={post.node.id} />
                 ))}
         </div>
+       
       </section>
   </Layout>
 )

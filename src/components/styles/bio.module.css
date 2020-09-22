@@ -1,7 +1,14 @@
 .mainSection{
+    width: 100%;
+    /*background-color: rgb(23,23,23);*/
+    background-color: rgb(0,0,0);
+}
+
+.mainWrapper{
     max-width: 1000px;
     height: 100vh;
-    margin: 5rem auto 5rem auto;
+    margin: 0 auto 0 auto;
+    padding-top:5rem;
     text-align: center;
 }
 
@@ -9,9 +16,7 @@
     margin-left: 2rem;
     font-size: 7rem;
     text-align: left;
-    color:rgb(245,243,238);;
-    -webkit-text-stroke: 4px black;
-    text-shadow: 7px 0px 0px black;
+    color:rgb(245,243,238);
 }
 
 .paraBlock{
@@ -20,14 +25,16 @@
     font-size: 1.2rem;
     line-height: 2.5rem;
     text-align: left;
+    color:white;
 }
 
 .borderBottom{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     padding-bottom: 2rem;
 }
 
 .icon{
+    color: white;
     text-align: center;
     height: 3rem;
     width: 3rem;
@@ -50,7 +57,10 @@
 
 @media only screen and (max-width: 450px){
     .mainSection{
-        margin: 3rem 1rem 3rem 1rem;
+        padding: 1rem;
+    }
+    .mainWrapper{
+        padding-top: 2rem;
     }
     .titleWrapper{
         margin-left: .5rem;
