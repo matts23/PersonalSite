@@ -103,6 +103,10 @@ const ContactForm = () => {
                     placeholder="write something"/>
                     <SubmitButton>Submit
                     </SubmitButton>
+                    <span style={{color:`white`,
+                fontSize: `1rem`,
+                padding: `1rem`,
+                color: `yellow`}}>*note that form does not currently function</span>
                 </Container>
             </Form>
         </Wrapper>
