@@ -1,10 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 import Nav from "./mobile-nav"
-import LayoutStyles from "./styles/layout.module.css"
+import styled from "styled-components"
+
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+`;
+
+const Main = styled.div`
+  width: 100%auto;
+  min-height: 100vh;
+`;
+
+const Footer = styled.div`
+  width: 100%100vh;
+  height: 15rem;
+  background-color: rgb(0,0,0);
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,13 +33,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className={LayoutStyles.mainWrapper}>
+    <Container>
       <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <footer>
-          <Nav />
-        </footer>
-      </div>
+      <Main>{children}</Main>
+      <Footer>
+        <Nav />
+      </Footer>
+    </Container>
   )
 }
 

@@ -53,9 +53,6 @@ const Header = ({ siteTitle }) => (
           <ListItem>
             <GoTo to="/blog">Articles</GoTo>
           </ListItem>
-          <ListItem>
-            <GoTo to="/contact">Contact</GoTo>
-          </ListItem>
         </List>
       </Nav>
   </HeaderContainer>

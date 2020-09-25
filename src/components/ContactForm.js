@@ -1,72 +1,111 @@
 import React from "react"
 import styled from "styled-components"
 
-const Form = styled.form`
-    /*background-color: rgb(255, 102, 102);*/
-    background-color: rgba(36, 123, 160, .6);
-    
-    width: 100%;
-    padding: 5rem;
-`;
 
-const Container = styled.div`
-    display: grid;
-    grid-template-columns: 8rem auto;
-    grid-template-rows: auto;
-    grid-row-gap: 2rem;
-    max-width: 700px;
+const Form = styled.form`
+    max-width: 500px;
+    padding: 1rem;
     margin: auto;
 `;
 
-const Label = styled.label`
+const Wrapper = styled.div`
+    background-color: rgb(0,0,0);
+    width: 100%;
+`;
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Label = styled.label`
+    color: white;
+    padding: 1rem 0 1rem 0;
 `;
 
 const EmailInput = styled.input`
-    max-width: 25rem;
-    border: 1px solid black;
-    background-color: rgb(36, 123, 160);
-    border-radius: 5px;
+    color: white;
+    
+    border: transparent;
+    background-color: rgb(20,20,20);
     font-size: 1.3rem;
+    padding: .4rem;
+`;
+
+const NameInput = styled.input`
+    color: white;
+    
+    border: transparent;
+    background-color: rgb(20,20,20);
+    font-size: 1.3rem;
+    padding: .4rem;
 `;
 
 const MessageInput = styled.textarea`
-    max-width: 25rem;
+    color: white;
+    border: transparent;
+    
     font-size: 1.3rem;
-    background-color: rgb(36, 123, 160);;
-    border: 1px solid black;
-    border-radius: 5px;
+    background-color: rgb(20,20,20);
+    padding: .4rem;
 `;
 
 const SubmitButton = styled.button`
-
+    color: white;
+    background-color: rgb(0,0,0);
+    border: .5px solid white;
+    margin: 3rem auto 0 auto;
+    padding: .5rem;
+    font-size: 1.1rem;
+    text-align: left;
+    :hover{
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
 `;
 
-const FormGroup = styled.p`
-    text-align: left;
-`
+const Title = styled.h3`
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    padding-top: 3rem;
+`;
+
 
 const ContactForm = () => {
     return(
-        <Form>
-            <Container>
+        <Wrapper>
+            <Title>Get in Touch</Title>
+            <Form>
+                <Container>
+                    <Label htmlFor="name">Name</Label>
+                    <NameInput
+                    type="text"
+                    id="name"
+                    name="client_name"
+                    placeholder="your name"/>
+                    
+
+                    <Label htmlFor="email">Email</Label>
+                    <EmailInput
+                    type="email"
+                    id="email"
+                    name="client_mail"
+                    placeholder="example@me.com"/>
             
-                <Label htmlFor="email">Email</Label>
-                <EmailInput
-                type="email"
-                id="email"
-                name="client_mail"/>
-           
-           
-                <Label htmlFor="message">Message</Label>
-                <MessageInput
-                type="text"
-                id="message"
-                rows="5"
-                cols="40"/>
-            </Container>
-            <SubmitButton>Submit</SubmitButton>
-        </Form>
+                    <Label htmlFor="message">Message</Label>
+                    <MessageInput
+                    type="text"
+                    id="message"
+                    rows="5"
+                    cols="40"
+                    placeholder="write something"/>
+                    <SubmitButton>Submit
+                    </SubmitButton>
+                </Container>
+            </Form>
+        </Wrapper>
     )
 }
 

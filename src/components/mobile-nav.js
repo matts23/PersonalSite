@@ -15,7 +15,6 @@ class Nav extends React.Component{
         })
     }
 
-
     render(){
         let icon = this.state.bottomDrawerOpen ? <X /> : <Menu />
         return (
@@ -30,11 +29,6 @@ class Nav extends React.Component{
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" className={NavStyles.linkWrapper}>
-                            Home
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="/projects"className={NavStyles.linkWrapper}>
                             Projects
                         </Link>
@@ -45,8 +39,8 @@ class Nav extends React.Component{
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact" className={NavStyles.linkWrapper}>
-                            Contact
+                        <Link to="/" className={NavStyles.linkWrapper}>
+                            Home
                         </Link>
                     </li>
                 </ul>

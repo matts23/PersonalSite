@@ -30,7 +30,7 @@ const IndexPage = ({data}) => (
                       id={post.node.id} />
                 ))}
         </div>
-       
+       <ContactForm />
       </section>
   </Layout>
 )
