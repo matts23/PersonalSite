@@ -92,7 +92,7 @@ const ContactForm = () => {
                     type="email"
                     id="email"
                     name="client_mail"
-                    placeholder="example@me.com"/>
+                    placeholder="your email"/>
             
                     <Label htmlFor="message">Message</Label>
                     <MessageInput
@@ -100,7 +100,7 @@ const ContactForm = () => {
                     id="message"
                     rows="5"
                     cols="40"
-                    placeholder="write something"/>
+                    placeholder="your message"/>
                     <SubmitButton>Submit
                     </SubmitButton>
                     <span style={{color:`white`,
