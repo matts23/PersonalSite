@@ -10,8 +10,8 @@ const CardContainer = styled.div`
     border: 1px solid black;
 
     img{
-        height: 100%;
-        width: 100%;
+        max-height: 450px;
+        max-width: 550px;
         position: relative;
         
     }

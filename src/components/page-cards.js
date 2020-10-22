@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Card from "./card"
 import BCC from "../images/bcc.png"
+import weather from "../images/weather-app.png"
 
 const Wrapper = styled.section`
     width: 100%;
@@ -51,8 +52,11 @@ const PageCard = () =>(
             codesrc="https://github.com/mattszydev/BrokenChainCharter"
             content="A fully responsive landing page built using GatsbyJS"/>
 
-            <Card title="Project 2"
-            content="Consequatur voluptatum esse corrupti iusto ut similique accusantium, recusandae minima tempore maiores temporibus magni repellat error odio distinctio placeat dolor cupiditate pariatur."/>
+            <Card title="Weather App"
+            imgsource={weather}
+            livesrc="https://mattszydev-weather-app.netlify.app/"
+            codesrc="https://github.com/mattszydev/ReactWeatherApp"
+            content="Weather app featuring search bar with auto suggestion drop down."/>
 
             <Card title="Project 3"
             content="Consequatur voluptatum esse corrupti iusto ut similique accusantium, recusandae minima tempore maiores temporibus magni repellat error odio distinctio placeat dolor cupiditate pariatur."/>
